@@ -1,0 +1,17 @@
+{% extends 'Files/base.html' %}
+
+{% block title %}Notatnik{% endblock %}
+<h2>Notatnik Dietetyka/ Zalecenia ręczne </h2>
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ textN }}
+
+        <input type="submit" class="btn btn-second btn-lg" value="Wyślij">
+    </form>
+
+    <button type="button" class="btn btn-primary btn-lg"><a href="{% url 'menu' %}">Powrót</a></button>
+{% endblock %}
+
